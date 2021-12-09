@@ -1,2 +1,2 @@
-# app
-Todolist
+TodoList
+BLJ Projekt
