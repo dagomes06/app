@@ -97,8 +97,9 @@ dataObjectUpdated();
 function addItemToDOM(text, completed){
     var list = (completed) ? document.getElementById('completed') : document.getElementById('todo');
 
-    var item = document.createElement('li');
+    var item  = document.createElement('li');
     item.innerText = text;
+
 
     var buttons = document.createElement('div');
     buttons.classList.add('buttons');
@@ -106,6 +107,13 @@ function addItemToDOM(text, completed){
     var remove = document.createElement('button');
     remove.classList.add('remove');
     remove.innerHTML = removeSVG;
+
+
+    var date = document.createElement("input");
+    date.setAttribute("type", "date");
+    date.setAttribute("value", "2021-12-17");
+    document.getElementById("todo").appendChild(date);
+    
 
 //item soll verschwinden wenn auf mülleimer geklickt wird
     remove.addEventListener('click', removeItem);

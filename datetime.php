@@ -11,7 +11,17 @@ $stmt = $dbConnection ->prepare('INSERT INTO datum (datum) VALUES(:date)');
 $stmt->execute([':date' => $datum]);
 
 
+
 }
+
+var_dump($datum);
+
+$empfaenger = "daniel_todolist@gmx.ch";
+$betreff = "Aufgabe XY";
+$from="TodoListe <daniel_todolist@gmx.ch>";
+$text="Sie haben noch (diese Aufgabe) zu erledigen";
+
+mail($empfaenger, $betreff, $text, $from);
 
 ?>
 <!DOCTYPE html>
@@ -36,15 +46,6 @@ $stmt->execute([':date' => $datum]);
     <div>
         <input type="submit" value="Absenden">
     </div>
-
-<?php
-$empfaenger = "daniel_todolist@gmx.ch";
-$betreff = "Aufgabe XY";
-$from="TodoListe <daniel_todolist@gmx.ch>";
-$text="Sie haben noch (diese Aufgabe) zu erledigen";
-
-mail($empfaenger, $betreff, $text, $from);
-?>
 
 </form>
 
