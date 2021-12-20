@@ -14,7 +14,7 @@ body, input, button{
 }
 
 input{
-    font-size:12px;
+    font-size:14px;
     color:#444;
     line-height: 22px;
     background:#fff;
@@ -23,6 +23,18 @@ input{
 
 
     float:right;
+
+
+    
+
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    width:50%;
+    height:3em;
+left:25%;
 
 }
 
@@ -86,7 +98,6 @@ header button{
     border:0px;
     box-shadow:none;
     outline:none;
-    cursor:pointer;
 
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -112,6 +123,8 @@ header button svg{
     width:100%;
     float:left;
     padding:15px;
+
+    padding-bottom:6em;
 }
 
 ul.todo{
@@ -233,4 +246,41 @@ ul.todo#completed:before{
     top:30px;
     left:50%;
     margin:0 0 0 -75px;
+}
+
+
+
+
+a.done svg {
+    border-radius:11px;
+    border:1.5px solid #87beff;
+    fill:#fff;
+    width:50px;
+    height:50px;
+    top:50%;
+    left:50%;
+    margin:-11px 0 0 -11px;
+    background: #87beff;
+
+
+float:right;
+    
+}
+
+
+a.home svg{
+border-radius:11px;
+border:1.5px solid #87beff;
+fill:#fff;
+background: #87beff;
+
+width:50px;
+height:50px;
+top:50%;
+left:50%;
+margin:-11px 0 0 -11px;
+
+
+float:left;
+
 }

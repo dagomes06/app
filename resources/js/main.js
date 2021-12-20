@@ -108,12 +108,12 @@ function addItemToDOM(text, completed){
     remove.classList.add('remove');
     remove.innerHTML = removeSVG;
 
-
+/*
     var date = document.createElement("input");
     date.setAttribute("type", "date");
-    date.setAttribute("value", "2021-12-17");
     document.getElementById("todo").appendChild(date);
-    
+
+*/
 
 //item soll verschwinden wenn auf mülleimer geklickt wird
     remove.addEventListener('click', removeItem);
@@ -121,6 +121,9 @@ function addItemToDOM(text, completed){
     var complete = document.createElement('button');
     complete.classList.add('complete');
     complete.innerHTML = completeSVG;
+
+    var date = document.createElement('button');
+    date.classList.add('complete');
 
 //item soll erledigt werden
     complete.addEventListener('click', completeItem);
@@ -130,4 +133,12 @@ function addItemToDOM(text, completed){
     item.appendChild(buttons);
 
     list.insertBefore(item, list.childNodes[0]);
+    
+
+
 }
+
+
+
+
+// aufgabe zu unterseite hinzufügen
