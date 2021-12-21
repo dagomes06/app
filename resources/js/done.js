@@ -4,22 +4,6 @@ data = JSON.parse(localStorage.getItem(data));
 localStorage.getItem(localStorage.key('todoList'));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // fügt neues Item zu der Liste hinzu
 function addItemToDOM(text, completed){
     var list = (completed) ? document.getElementById('completed') : document.getElementById('todo');
@@ -56,3 +40,19 @@ function addItemToDOM(text, completed){
     list.insertBefore(item, list.childNodes[0]);
 
 }
+
+
+/*
+const iframe = iframe = document.getElementById('completed')
+iframe.contentWindow.postMessage({
+  action: 'get',
+  key: 'keyForData'
+})
+window.addEventListener("message", messageHandler, false);
+function messageHandler(event) {
+  const { action, key, value } = event.dat
+  if (action == 'returnData'){
+    useData(key, value)
+  }
+}
+*/

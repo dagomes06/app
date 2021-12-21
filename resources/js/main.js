@@ -138,10 +138,39 @@ function addItemToDOM(text, completed){
 
 }
 
-// aufgabe zu unterseite hinzufügen
+/* Iframe
 
-function valuesender(){
-    var a = complete;
-    localStorage.setItem("done", a);
-    window.location.href="../done.html"
+const domains = [
+    "file:///C:/todolist/app/index.html",
+    "file:///C:/todolist/app/done.html"
+]
+
+window.addEventListener("message", messageHandler, false);
+
+function messageHandler(event){
+    if (!domains.includes(event.origin))
+    return;
+
+    const { action, key, value} = event.dat
+    if (action == 'save'){
+        window.localStorage.setItem(key, JSON.stringify(value))
+    }
+    else if (action == 'get'){
+        event.source.postMessage({
+            action: 'returnData',
+            key,
+            JSON:parse(window.localStorage.getItem(key))
+        }, '*')
+    }
 }
+
+
+const dat = addItem()
+const iframe = document.getElementById('completed')
+iframe.contentWindow.postMessage({
+  action: 'save',
+  key: 'keyForData',
+  value: dat
+})
+
+*/
