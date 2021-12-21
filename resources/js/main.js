@@ -133,12 +133,15 @@ function addItemToDOM(text, completed){
     item.appendChild(buttons);
 
     list.insertBefore(item, list.childNodes[0]);
-    
+
 
 
 }
 
-
-
-
 // aufgabe zu unterseite hinzufügen
+
+function valuesender(){
+    var a = complete;
+    localStorage.setItem("done", a);
+    window.location.href="../done.html"
+}
