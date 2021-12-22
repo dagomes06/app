@@ -37,8 +37,8 @@ function addItemToDOM(text, completed){
     var date = document.createElement('button');
     date.classList.add('complete');
 
-//item soll erledigt werden
-    complete.addEventListener('click', completeItem);
+//item soll angezeigt werden
+
 
     buttons.appendChild(remove);
     buttons.appendChild(complete);
@@ -48,16 +48,6 @@ function addItemToDOM(text, completed){
 
 }
 
-
-function completeItem(){
-  var item = this.parentNode.parentNode;
-  var parent = item.parentNode;
-  var id = parent.id;
-  var value = item.innerText;
-
-  data.completed.splice(data.completed.indexOf(value), 1);
-  data.todo.push(value);
-}
 
 function removeItem() {
   var item = this.parentNode.parentNode;
