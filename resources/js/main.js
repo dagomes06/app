@@ -85,7 +85,7 @@ dataObjectUpdated();
 //checkt in welcher Liste die Aufgabe sein soll
     var target = (id === 'todo') ? document.getElementById('completed'): document.getElementById('todo');
 
-    parent.removeChild(item, 1);
+    parent.removeChild(item);
 
 }
 
